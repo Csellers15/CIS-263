@@ -1,0 +1,8 @@
+hashCode(string key, int D)
+  int h = 0;
+  for(int i = o; i < key.length(); i++){
+    h = (h << 4) | (h >> 27);
+    h += (int) key(i)
+  }
+ return (h % D)
+}
