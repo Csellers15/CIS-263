@@ -1,0 +1,14 @@
+Search(key){
+  index = hash(key) % table_size;
+  if(table[index] == NULL)
+  //Means nothing was found
+    return -1;
+  //found and returns index of key
+  else if(table[index].key == key)
+    return index;
+  else{
+  index++;
+  index = index % table_size
+  goto 2;
+  }
+}
