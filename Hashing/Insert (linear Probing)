@@ -1,0 +1,11 @@
+// assume h and k are unique keys
+Insert(h,k){
+ index = hash(key) % table_size;
+ if(table[index] == NULL)
+    table[index] = new key_value_pair(key,x);
+ else{
+  index++;
+  index = index % table_size;
+  goto 2;
+  }
+}
