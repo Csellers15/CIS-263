@@ -1,0 +1,6 @@
+int h(string x, int D){
+  int i, sum;
+  for(sum = 0; i = 0; i < x.length(); i++)
+    sum += (int) x(i);
+   return (sum % D)
+)
