@@ -1,0 +1,6 @@
+int DisjSets::find(int x){
+  if(s[x] < 0)
+    return x;
+  else
+    return s[x] = find(s[x]);
+}
