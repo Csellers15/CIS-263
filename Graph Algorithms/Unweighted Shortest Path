@@ -1,0 +1,28 @@
+void Graph::unweighted(Vertex s){
+  Queue<Vertex> q;
+  
+  for each Vertex v
+    v.dist = INFINITY;
+    
+  s.dist = 0;
+  q.enqueue(s);
+  
+  while(!q.isEmpty()){
+    Vertex v = q.dequeue();
+    
+    for each Vertex w adjacent to v
+      if(w.dist == INFINITY){
+        w.dist = v.dist + 1;
+        w.path = v;
+        q.enqueue(w);
+      }
+  }
+}
+
+Void Graph::printPath(Vertex v){
+  if(v.path != NOT_A_VERTEX){
+    printPath(v.path);
+    cout << " : ";
+  }
+ cout v;
+}
