@@ -1,0 +1,20 @@
+//Pseudocode for Topological Sort
+
+Queue <Vertex> q;
+int counter = 0;
+
+q.makeEmpty();
+for each Vertex v
+  if(v.indegree == 0)
+    q.enqueue(v);
+  
+while(!q.isEmpty()){
+  vertex v = q.dequeue();
+  //assigns next number
+  v.topNum = ++counter; 
+  
+  for each Vertex w adjacent to v
+    if(--w.indegree == 0)
+      q.enqueue(w);
+}
+
