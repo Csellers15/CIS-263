@@ -1,0 +1,5 @@
+int disjSets::find(int x) const{
+  if(s[x] < 0)
+    return x;
+  else return find(s[x]);
+}
