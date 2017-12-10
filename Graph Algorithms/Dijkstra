@@ -1,0 +1,24 @@
+//pseudocode for Dijkstra's Algorithm
+
+function Dijkstra(G,w,s){
+  for each vertex v in V[G]{
+    d[v] := INFINITY
+    previous[v] := undefined
+   }
+  d[s] := 0
+  s := empty set
+  Q := V[G]
+  
+  while Q is not an empty set{
+    u := Extract_Min(Q)
+    S := S union{u}
+    
+    for each edge (u,v) outgoing from u{
+      if(d[u] + w(u,v) < d[v]{
+        d[v] := d[u] + w(u,v)
+        previous[v] := u
+      }
+    }
+  }
+}
+    
