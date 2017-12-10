@@ -1,0 +1,3 @@
+void DisjSets::unionSets(int root1, int root2){
+  s[root2] = root1;
+ }
